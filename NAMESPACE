@@ -4,7 +4,7 @@
 import("Formula")
 import("stats")
 importFrom("mlogit", "mlogit.data")
-importFrom("mlogit", "index")
+#importFrom("mlogit", "index")
 importFrom("lmtest", "lrtest")
 importFrom("lmtest", "lrtest.default")
 importFrom("lmtest", "waldtest")
@@ -15,7 +15,7 @@ importFrom("lmtest", "waldtest.default")
 ######################################################################
 useDynLib(mnlogit, "computeHessianDotCall")
 export("mnlogit", "lrtest", "waldtest", "scoretest", "hmftest")
-export("index")
+#export("index")
 
 ######################################################################
 ## mnlogit methods
@@ -30,7 +30,7 @@ S3method("vcov", "mnlogit")
 S3method("logLik", "mnlogit")
 S3method("summary", "mnlogit")
 S3method("print", "summary.mnlogit")
-S3method("index", "mnlogit")
+#S3method("index", "mnlogit")
 S3method("predict", "mnlogit")
 S3method("coef", "mnlogit")
 S3method("lrtest", "mnlogit")
