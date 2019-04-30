@@ -100,7 +100,7 @@ mnlogit <- function(formula, data, choiceVar=NULL, maxiter = 50, ftol = 1e-6,
     if (!is.null(weights)) weights <- weights * N / sum(weights)    
 
     # Work with only the columns appearing in formula
-    data <- data[c(varNames, choiceVar)]
+    data <- data[, c(varNames, choiceVar)]
 
     # Handle NA; Find out row numbers with atleast one NA
     na.rows <- c()
